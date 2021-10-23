@@ -37,5 +37,6 @@ A priority queue is a special type of queue in which each element is associated 
 And, elements are served on the basis of their priority.
 
 
-今天：HashMap和 minheap 代码写了，做题
+今天：minheap 代码写了，做priority queue的题
+明天: TreeMap复习, 今天：HashMap 做起来，做下Tree的题
 next：图，BFS, DFS搞起来
