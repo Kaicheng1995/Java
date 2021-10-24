@@ -47,12 +47,14 @@ public class Graph {
         private int s;  // starting vertice
 
         public DFS(Graph G, int s) {
-            ...
+            marked = new boolean[V];
+            edgeTo = new int[V];
+            s = s;
             dfs(G,s);
         }
         
         // find the paths from G, starting from vertice v
-        private void dfs(Grapg G, int v) {
+        private void dfs(Graph G, int v) {
             marked[v] = true;
             for (int w : G.adj[v]) {
                 if (!marked[w]) {
@@ -92,7 +94,9 @@ public class Graph {
         private int s;
 
         public BFS(Graph G, int s) {
-            ...
+            marked = new boolean[V];
+            edgeTo = new int[V];
+            s = s;
             bfs(G,s);
         }
 
