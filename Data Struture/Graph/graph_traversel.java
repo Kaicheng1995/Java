@@ -5,6 +5,8 @@
 * 4. 所有 Tree 都属于 Gragh。（如果有cycle 或者有 disconnected nodes，都不是tree）
 * 
 * Graph Traversals: DFS PreOrder, DFS PostOrder, BFS (LevelOrder)
+* Graph Implementation: Adjacency List（最优）
+* Graph with adjacency list's printing Runtime: theta(V+E)  V是顶点数，E是edge数
 *
 */
 
@@ -31,7 +33,7 @@ isconnected(s, t) {
     return false
 }
 
-2. DepthFitstPaths:  找到顶点 s 到其它每个 vertice 的路径
+2.1. DepthFitstPaths（DFS):  找到顶点 s 到其它每个 vertice 的路径
 // 方法一： DFS - PreOrder
 dfs(v):
     mark v;
@@ -48,6 +50,16 @@ dfs(v):
         // [核心！！！！]：DFS PostOrder: Action is after DFS calls to neighbors
         set edgeTo[w] = v
 
+
+2.2. BreadthFirstPaths(BFS): 找到顶点 s 到其他每个 vertice 的最短路径
+initialize a queue with a starting vertex S and mark S
+REPEAT: (until queue is empty)
+    remove vertex V from the front of the queue
+    For each unmarked neighbor N of V：
+        mark N
+        // distTo 是用来计算最短距离的（！！！btw这里没有算edge权重）
+        set edgeTo[N] = V and distTo[N] = distTo[V] + 1
+        add N to end of queue
 
 
 
